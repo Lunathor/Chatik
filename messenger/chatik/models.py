@@ -6,7 +6,7 @@ class User(AbstractUser):
     photo = models.ImageField(upload_to='media/profilePhotos/', null=True, blank=True)
     
 class Chat(models.Model):
-    name = models.CharField(max_length=20)
+    title = models.CharField(max_length=20)
     users = models.ManyToManyField(User, related_name='chats')
     
     def __str__(self):
