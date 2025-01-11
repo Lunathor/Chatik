@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5176527a-7cc4-4c4f-bae4-fa12efff6dea" name="Changes" comment="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем">
+    <list default="true" id="5176527a-7cc4-4c4f-bae4-fa12efff6dea" name="Changes" comment="Добавлены основные представления и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/chatik/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/chatik/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,35 +23,35 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Lunathor"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lunathor&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lunathor/Chatik.git",
-    "accountId": "681dd5da-2b41-43bf-a0c8-a9e799f38ba3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lunathor/Chatik.git&quot;,
+    &quot;accountId&quot;: &quot;681dd5da-2b41-43bf-a0c8-a9e799f38ba3&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2rTuEVNLnaqlDnbAwUoavbsBJg1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -101,13 +100,34 @@
       <option name="project" value="LOCAL" />
       <updated>1736627791104</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлены основные представления и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем">
+      <option name="closed" value="true" />
+      <created>1736629074869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736629074869</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Добавлены сериализаторы, на очереди представления" />
+    <MESSAGE value="Добавлены основные представления и" />
     <MESSAGE value="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем" />
+    <MESSAGE value="Добавлены основные представления и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены основные представления и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем" />
   </component>
 </project>
