@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5176527a-7cc4-4c4f-bae4-fa12efff6dea" name="Changes" comment="Добавлены сериализаторы, на очереди представления">
+    <list default="true" id="5176527a-7cc4-4c4f-bae4-fa12efff6dea" name="Changes" comment="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/chatik/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/chatik/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messenger/chatik/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/chatik/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/messenger/chatik/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/chatik/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,12 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1736600345793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем">
+      <option name="closed" value="true" />
+      <created>1736627791104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736627791104</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Добавлены сериализаторы, на очереди представления" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены сериализаторы, на очереди представления" />
+    <MESSAGE value="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено первое представление и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем" />
   </component>
 </project>
