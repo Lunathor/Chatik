@@ -113,3 +113,9 @@ class ChatMessagesView(View):
         except Http404:
             # Обрабатываем ошибку 404, если чат не найден
             return JsonResponse({'error': 'Chat not found'}, status=404)
+        
+
+def mainPage(request):
+    # Обрабатываем GET-запрос и возвращаем главную страницу
+    # 'index.html' - это шаблон, который будет отрендерен
+    return render(request, 'index.html')
