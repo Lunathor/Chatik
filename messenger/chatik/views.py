@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from models import *
+from .models import *
 from .serializers import *
+from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -119,3 +120,7 @@ def mainPage(request):
     # Обрабатываем GET-запрос и возвращаем главную страницу
     # 'index.html' - это шаблон, который будет отрендерен
     return render(request, 'index.html')
+
+
+class ObtainPairView(TokenObtainPairView):
+    permission_classes = [permissions.AllowAny]
