@@ -36,6 +36,7 @@ class UserView(viewsets.ModelViewSet):
         # Параметр partial=True позволяет обновлять только те поля, которые были переданы
         user_serializer = self.get_serializer(current_user, data=request.data, partial=True)
         
+        logger.info("Попытка обновления профиля для пользователя: %s", current_user.username)
         # Проверяем, валидны ли данные, переданные в сериализатор
         if user_serializer.is_valid():
             # Если данные валидны, сохраняем обновленные данные пользователя
@@ -55,13 +56,15 @@ class UserView(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['post'], permission_classes=[permissions.AllowAny])
     def registerUser(self, request):
+        logger.info("Регистрация пользователя с данными: %s", request.data)
         # Создаем сериализатор с данными из запроса
         serializer = UserRegSerializer(data=request.data)
         if serializer.is_valid():
             # Сохраняем нового пользователя
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # Возвращаем ошибки валидации, если данные не валидны
+        # Вызов метода регистрации для создания пользователя
+        user = serializer.registration(serializer.validated_data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -124,3 +127,10 @@ def mainPage(request):
 
 class CustomTokenObtainPairView(TokenObtainPairView):
     permission_classes = [permissions.AllowAny]
+
+    def post(self, request, *args, **kwargs):
+        logger.info("Попытка входа с данными: %s", request.data)
+        response = super().post(request, *args, **kwargs)
+        if response.status_code != 200:
+            logger.error("Ошибка входа: %s", response.data)
+        return response

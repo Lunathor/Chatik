@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             fetch('/api/chats/', {
                 method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${token}`,
+                    'Authorization': `Token ${token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ name: chatName })
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('/api/users/me/', {
             method: 'PUT',
             headers: {
-                'Authorization': `Bearer ${token}`,
+                'Authorization': `Token ${token}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Загружаем пользователя');
         fetch('/api/users/me/', {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Token ${token}`
             }
         })
         .then(response => {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         fetch('/api/users/', {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Token ${token}`
             }
         })
         .then(response => response.json())
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         fetch('/api/chats/', {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Token ${token}`
             }
         })
         .then(response => response.json())
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         fetch(`/api/chats/${chatId}/messages/`, {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Token ${token}`
             }
         })
         .then(response => {
