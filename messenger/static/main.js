@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Ошибка загрузки пользователя', error);
-            currentUser = { login: 'Unknown', photo: '/media/profilePhotos/unknownProfilePhoto.jpg'};
+            currentUser = { username: 'Unknown', photo: '/media/profilePhotos/unknownProfilePhoto.jpg'};
         });
     }
 
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 usersDiv.innerHTML = '';
                 data.forEach(user => {
                     const userDiv = document.createElement('div');
-                    userDiv.textContent = user.login;
+                    userDiv.textContent = user.username;
                     userDiv.onclick = () => openChat(user.id);
                     usersDiv.appendChild(userDiv);
                 });
@@ -272,13 +272,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
         const profilePhotoImage = document.createElement('img');
         profilePhotoImage.src = message.user.profilePhoto || '/media/profilePhoto/unknownProfilePhoto.jpg';
-        profilePhotoImage.alt = `${message.user.login}'s profile photo`;
+        profilePhotoImage.alt = `${message.user.username}'s profile photo`;
         profilePhotoImage.width = 50;
         profilePhotoImage.height = 50;
     
         const contentDiv = document.createElement('div');
         contentDiv.className = 'message-content';
-        contentDiv.innerHTML = `<div class="message-author">${message.user.login}</div><div>${message.content}</div>`;
+        contentDiv.innerHTML = `<div class="message-author">${message.user.username}</div><div>${message.content}</div>`;
     
         messageDiv.appendChild(profilePhotoImage);
         messageDiv.appendChild(contentDiv);
