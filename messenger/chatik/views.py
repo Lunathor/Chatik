@@ -122,5 +122,5 @@ def mainPage(request):
     return render(request, 'index.html')
 
 
-class ObtainPairView(TokenObtainPairView):
+class CustomTokenObtainPairView(TokenObtainPairView):
     permission_classes = [permissions.AllowAny]

@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5176527a-7cc4-4c4f-bae4-fa12efff6dea" name="Changes" comment="Добавлены основные представления и комментарии к коду для лучшего понимания преподавателя и в целом при разборе кода в будущем">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/chatik/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/chatik/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messenger/chatik/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/messenger/chatik/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
