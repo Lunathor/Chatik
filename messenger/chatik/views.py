@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 class UserView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
     
     @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
     def profile(self, request):
