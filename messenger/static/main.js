@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDiv.className = 'message';
     
         const profilePhotoImage = document.createElement('img');
-        profilePhotoImage.src = message.user.profilePhoto || '/media/profilePhoto/unknownProfilePhoto.jpg';
+        profilePhotoImage.src = message.user.photo || '/media/profilePhotos/unknownProfilePhoto.jpg';
         profilePhotoImage.alt = `${message.user.username}'s profile photo`;
         profilePhotoImage.width = 50;
         profilePhotoImage.height = 50;

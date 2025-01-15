@@ -36,7 +36,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 'chat_id': self.room_name,  # Добавляем ID чата
                 'user': {
                     'username': user.username,
-                    'avatar': user.avatar.url if user.avatar else '/media/avatars/default-avatar.jpeg',
+                    'avatar': user.photo.url if user.photo else '/media/profilePhotos/unknownProfilePhoto.jpg',
                 }
             }
         )

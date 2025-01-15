@@ -76,7 +76,7 @@ class ChatSerializer(serializers.ModelSerializer):
         fields = [
             'id',  # Уникальный идентификатор чата
             'title',  # Заголовок чата
-            'members'  # Участники чата (сериализуются через UserSerializer)
+            'chatMembers'  # Участники чата (сериализуются через UserSerializer)
         ]
 
 
