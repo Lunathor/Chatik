@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let token = '';
     let currentChatId = null;
     let socket = null
-    let currentUser = { login: 'Unknown', profilePhoto: '/media/profilePhoto/unknownProfilePhoto.jpg'};
+    let currentUser = { username: 'Unknown', photo: '/media/profilePhoto/unknownProfilePhoto.jpg'};
 
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const login = document.getElementById('login').value;
+        const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
         fetch('/api/login/', {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ login, password })
+            body: JSON.stringify({ username, password })
         })
         .then(response => response.json())
         .then(data => {
@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     registerForm.addEventListener('submit', function(e){
         e.preventDefault();
         const formData = new FormData();
-        formData.append('login', document.getElementById('regLogin').value);
+        formData.append('username', document.getElementById('regUsername').value);
         formData.append('password', document.getElementById('regPassword').value);
-        formData.append('firstName', document.getElementById('regFirstName').value);
-        formData.append('lastName', document.getElementById('regLastName').value);
-        formData.append('profilePhoto', document.getElementById('regProfilePhoto').files[0]);
+        formData.append('first_name', document.getElementById('regFirstName').value);
+        formData.append('last_name', document.getElementById('regLastName').value);
+        formData.append('photo', document.getElementById('regProfilePhoto').files[0]);
 
         fetch('/api/users/register/',{
             method: 'POST',
@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
 
         const profileData = {
-            firstName: document.getElementById('profileFirstName').value,
-            lastName: document.getElementById('profileLastName').value
+            first_name: document.getElementById('profileFirstName').value,
+            last_name: document.getElementById('profileLastName').value
         };
-        if (document.getElementById('profilePhoto').files.length > 0) {
-            profileData.profilePhoto = document.getElementById('profilePhoto').files[0];
+        if (document.getElementById('photo').files.length > 0) {
+            profileData.photo = document.getElementById('photo').files[0];
         }
 
         fetch('/api/users/me/', {
@@ -155,17 +155,17 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Current user data:', data);
             currentUser = {
                 username: data.username || 'Unknown',
-                avatar: data.avatar || '/media/avatars/default-avatar.jpeg'
+                avatar: data.avatar || '/media/profilePhotos/unknownProfilePhoto.jpg'
             };
 
-            document.getElementById('profileUsername').value = data.login || '';
+            document.getElementById('profileUsername').value = data.username || '';
             document.getElementById('profileFirstName').value = data.firstName || '';
             document.getElementById('profileLastName').value = data.lastName || '';
 
         })
         .catch(error => {
             console.error('Ошибка загрузки пользователя', error);
-            currentUser = { login: 'Unknown', profilePhoto: '/media/profilePhoto/unknownProfilePhoto.jpg'};
+            currentUser = { login: 'Unknown', photo: '/media/profilePhotos/unknownProfilePhoto.jpg'};
         });
     }
 

@@ -39,7 +39,7 @@ class UserRegSerializer(serializers.ModelSerializer):
     
     def registration(self, validated_data):
         # Список обязательных полей для регистрации
-        required_fields = ['login', 'firstName', 'lastName', 'password']
+        required_fields = ['username', 'firstName', 'lastName', 'password']
         
         # Проверяем, что все обязательные поля присутствуют в данных
         for field in required_fields:
@@ -48,7 +48,7 @@ class UserRegSerializer(serializers.ModelSerializer):
         
         # Создаем нового пользователя с переданными данными
         user = User(
-            login=validated_data['login'],
+            username=validated_data['username'],
             firstName=validated_data['firstName'],
             lastName=validated_data['lastName'],
             photo=validated_data.get('photo')  # Получаем фото, если оно есть
