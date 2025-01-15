@@ -68,6 +68,8 @@ class UserView(viewsets.ModelViewSet):
 
 
 class ChatViewSet(viewsets.ModelViewSet):
+    logger = logging.getLogger(__name__)
+    
     # Определяем набор данных, который будет использоваться в этом представлении
     queryset = Chat.objects.all()
     

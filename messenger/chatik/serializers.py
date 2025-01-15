@@ -65,6 +65,8 @@ class UserRegSerializer(serializers.ModelSerializer):
 
 
 class ChatSerializer(serializers.ModelSerializer):
+    title = serializers.CharField(required=True)  # Add title field
+    
     # Поле для сериализации участников чата (пользователей)
     chatMembers = UserSerializer(many=True, read_only=True)
     

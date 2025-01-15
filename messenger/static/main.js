@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Authorization': `Token ${token}`,
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ name: chatName })
+                body: JSON.stringify({ title: chatName })
             })
             .then(response => response.json())
             .then(chat => {
