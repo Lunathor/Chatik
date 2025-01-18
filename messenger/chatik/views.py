@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class UserView(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    serializer_class = UserSerializer
+    serializer_class = UserRegSerializer
     
     @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
     def profile(self, request):
